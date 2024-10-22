@@ -1,41 +1,42 @@
-from calculator.operations import add, subtract, multiply, divide
+import logging
+from calculator.commands import AddCommand, SubtractCommand, MultiplyCommand, DivideCommand
 
-def repl():
+logging.basicConfig(level=logging.INFO)
+
+def main():
+    """Main function to run the calculator."""
     print("Welcome to the Python Calculator!")
-    print("Enter commands in the format: operation operand1 operand2")
     print("Operations: add, subtract, multiply, divide")
-    print("Type 'exit' to quit")
+    print("Type 'exit' to quit.")
 
     while True:
-        user_input = input(">>> ").strip().lower()
+        command = input("Enter command: ").lower()
 
-        if user_input == "exit":
-            print("Goodbye!")
+        if command == 'exit':
+            logging.info("Exiting the calculator.")
             break
 
-        try:
-            command, operand1, operand2 = user_input.split()
-            operand1 = float(operand1)
-            operand2 = float(operand2)
+        if command in ['add', 'subtract', 'multiply', 'divide']:
+            try:
+                a = float(input("Enter first number: "))
+                b = float(input("Enter second number: "))
 
-            if command == "add":
-                result = add(operand1, operand2)
-            elif command == "subtract":
-                result = subtract(operand1, operand2)
-            elif command == "multiply":
-                result = multiply(operand1, operand2)
-            elif command == "divide":
-                result = divide(operand1, operand2)
-            else:
-                print("Unknown command. Please use 'add', 'subtract', 'multiply', or 'divide'.")
-                continue
+                if command == 'add':
+                    result = AddCommand().execute(a, b)
+                elif command == 'subtract':
+                    result = SubtractCommand().execute(a, b)
+                elif command == 'multiply':
+                    result = MultiplyCommand().execute(a, b)
+                elif command == 'divide':
+                    result = DivideCommand().execute(a, b)
 
-            print(f"Result: {result}")
+                print("Result:", result)
 
-        except ValueError as e:
-            print(f"Error: {e}")
-        except Exception as e:
-            print(f"Invalid input: {e}")
+            except ValueError:
+                logging.error("Invalid input: Input must be numbers.")
+                print("Invalid input. Please enter valid numbers.")
+        else:
+            print("Unknown command. Type 'exit' to quit.")
 
 if __name__ == "__main__":
-    repl()
+    main()

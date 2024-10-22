@@ -1,18 +1,19 @@
 import pytest
-from calculator.operations import add, subtract, multiply, divide
+from calculator.commands import AddCommand, SubtractCommand, MultiplyCommand, DivideCommand
 
-def test_add():
-    assert add(3, 4) == 7
+def test_add_command():
+    command = AddCommand()
+    assert command.execute(2, 3) == 5
 
-def test_subtract():
-    assert subtract(10, 5) == 5
+def test_subtract_command():
+    command = SubtractCommand()
+    assert command.execute(5, 3) == 2
 
-def test_multiply():
-    assert multiply(2, 3) == 6
+def test_multiply_command():
+    command = MultiplyCommand()
+    assert command.execute(2, 3) == 6
 
-def test_divide():
-    assert divide(10, 2) == 5
-
-def test_divide_by_zero():
-    with pytest.raises(ValueError):
-        divide(10, 0)
+def test_divide_command():
+    command = DivideCommand()
+    assert command.execute(6, 3) == 2
+    assert command.execute(6, 0) == "Error: Cannot divide by zero."
