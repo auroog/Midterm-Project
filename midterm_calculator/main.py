@@ -4,6 +4,7 @@ This module handles user input and executes commands/
 """
 
 import logging
+import os
 from calculator.commands import AddCommand, SubtractCommand, MultiplyCommand, DivideCommand
 from calculator.history_manager import HistoryManager
 
@@ -17,6 +18,8 @@ def main():
     print("Type 'exit' to quit.")
 
     history_manager = HistoryManager()
+
+    enable_history = os.getenv('ENABLE_HISTORY', 'true').lower() == 'true' 
 
     while True:
         command = input("Enter command: ").lower()
@@ -32,18 +35,17 @@ def main():
 
                 if command == 'add':
                     result = AddCommand().execute(operand_a,operand_b)
-                    histoy_manager.add_to_history('add', operand_a, operand_b, result)
                 elif command == 'subtract':
                     result = SubtractCommand().execute(operand_a,operand_b)
-                    histoy_manager.add_to_history('subtract', operand_a, operand_b, result)
                 elif command == 'multiply':
                     result = MultiplyCommand().execute(operand_a,operand_b)
-                    histoy_manager.add_to_history('multiply', operand_a, operand_b, result)
                 elif command == 'divide':
                     result = DivideCommand().execute(operand_a,operand_b)
-                    histoy_manager.add_to_history('divide', operand_a, operand_b, result)
 
                 print("Result:", result)
+
+                if enable_history:
+                    history_manager.add_to_history(command, operand_a, operand_b, result)
 
             except ValueError:
                 logging.error("Invalid input: Input must be numbers.")
