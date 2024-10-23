@@ -1,0 +1,40 @@
+2024-10-23 18:05:52,301 - INFO - Calculator program started.
+2024-10-23 18:06:01,741 - INFO - User entered command: 236
+2024-10-23 18:06:01,742 - WARNING - Unknown command: 236
+2024-10-23 18:06:09,784 - INFO - User entered command: add
+2024-10-23 18:06:47,862 - ERROR - Invalid input: Input must be numbers.
+2024-10-23 18:06:51,229 - INFO - User entered command: 562
+2024-10-23 18:06:51,230 - WARNING - Unknown command: 562
+2024-10-23 18:06:56,867 - INFO - User entered command: divide
+2024-10-23 18:07:04,878 - INFO - Operands received: 51.0, 78.0
+2024-10-23 18:07:04,878 - INFO - Division result: 0.6538461538461539
+2024-10-23 18:07:04,884 - INFO - History logging is enabled.
+2024-10-23 18:07:04,886 - INFO - Added to history: divide(51.0, 78.0) = 0.6538461538461539
+2024-10-23 18:07:45,690 - INFO - User entered command: subtract
+2024-10-23 18:08:24,362 - INFO - Operands received: 8.0, 9.0
+2024-10-23 18:08:24,362 - INFO - Subtraction result: -1.0
+2024-10-23 18:08:24,363 - INFO - History logging is enabled.
+2024-10-23 18:08:24,364 - INFO - Added to history: subtract(8.0, 9.0) = -1.0
+2024-10-23 18:08:34,652 - INFO - User entered command: history
+2024-10-23 18:08:34,653 - INFO - Displaying calculation history.
+2024-10-23 18:09:50,132 - INFO - User entered command: exit
+2024-10-23 18:09:50,132 - INFO - Exiting the calculator.
+2024-10-23 18:13:45,298 - INFO - Calculator program started.
+2024-10-23 18:13:47,944 - INFO - User entered command: add
+2024-10-23 18:13:58,743 - INFO - Operands received: 85.0, 9.0
+2024-10-23 18:13:58,744 - INFO - Addition result: 94.0
+2024-10-23 18:13:58,745 - INFO - History logging is enabled.
+2024-10-23 18:13:58,747 - INFO - Added to history: add(85.0, 9.0) = 94.0
+2024-10-23 18:15:19,015 - INFO - User entered command: exit
+2024-10-23 18:15:19,015 - INFO - Exiting the calculator.
+2024-10-23 18:20:50,718 - INFO - Calculator program started.
+2024-10-23 18:20:52,462 - INFO - User entered command: add
+2024-10-23 18:21:42,671 - INFO - Operands received: 8.0, 7.0
+2024-10-23 18:21:42,672 - INFO - Addition result: 15.0
+2024-10-23 18:21:42,673 - INFO - History logging is enabled.
+2024-10-23 18:21:42,674 - INFO - Added to history: add(8.0, 7.0) = 15.0
+2024-10-23 18:21:42,675 - INFO - Added to history: add(8.0, 7.0) = 15.0
+2024-10-23 18:21:45,389 - INFO - User entered command: history
+2024-10-23 18:21:45,390 - INFO - Displaying calculation history.
+2024-10-23 18:22:49,165 - INFO - User entered command: exit
+2024-10-23 18:22:49,166 - INFO - Exiting the calculator.
