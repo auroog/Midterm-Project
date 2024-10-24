@@ -1,17 +1,38 @@
-def add(a: float, b: float) -> float:
-    """Add two numbers."""
-    return a + b
+"""
+Operations module for performing arithmetic operations in the calculator.
+"""
 
-def subtract(a: float, b: float) -> float:
-    """Subtract one number from another."""
-    return a - b
 
-def multiply(a: float, b: float) -> float:
-    """Multiply two numbers."""
-    return a * b
+def add(operand_a, operand_b):
+    """
+    Test the add function.
 
-def divide(a: float, b: float) -> float:
-    """Divide one number by another, handling division by zero."""
-    if b == 0:
-        raise ValueError("Cannot divide by zero.")
-    return a / b
+    This function tests the `add` operation with both positive and negative numbers.
+    """
+    return operand_a + operand_b
+
+def subtract(operand_a, operand_b):
+    """
+    Test the subtract function.
+
+    This function tests the `subtract` operation with both positive and negative numbers.
+    """
+    return operand_a - operand_b
+
+def multiply(operand_a, operand_b):
+    """
+    Test the multiply function.
+
+    This function tests the `multiply` operation with various numbers, including zero.
+    """
+    return operand_a * operand_b
+
+def divide(operand_a, operand_b):
+    """
+    Test the divide function.
+
+    This function tests the `divide` operation, including a check for division by zero.
+    """
+    if operand_b == 0:
+        raise ValueError("Cannot divide by zero")
+    return operand_a / operand_b

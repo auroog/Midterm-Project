@@ -5,8 +5,10 @@ This module handles user input and executes commands.
 
 import logging
 import os
-from calculator.commands import AddCommand, SubtractCommand, MultiplyCommand, DivideCommand
-from calculator.history_manager import HistoryManager
+from midterm_calculator.calculator.commands import (
+    AddCommand, SubtractCommand, MultiplyCommand, DivideCommand
+)
+from midterm_calculator.calculator.history_manager import HistoryManager
 
 log_level = os.getenv('LOG_LEVEL', 'INFO').upper()
 numeric_level = getattr(logging, log_level, logging.INFO)
@@ -19,6 +21,29 @@ formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
 file_handler.setFormatter(formatter)
 logging.getLogger().addHandler(file_handler)
 
+def execute_command(command, operand_a, operand_b):
+    """Executes the given command with the provided operands."""
+    if command == 'add':
+        result = AddCommand().execute(operand_a, operand_b)
+    elif command == 'subtract':
+        result = SubtractCommand().execute(operand_a, operand_b)
+    elif command == 'multiply':
+        result = MultiplyCommand().execute(operand_a, operand_b)
+    elif command == 'divide':
+        if operand_b == 0:
+            logging.error("Attempted to divide by zero.")
+            print("Cannot divide by zero.")
+            return None
+        result = DivideCommand().execute(operand_a, operand_b)
+    else:
+        logging.warning("Unknown command: %s", command)
+        return None
+
+    logging.info("%s result: %s", command.capitalize(), result)
+    print("Result:", result)
+
+    return result
+
 
 def main():
     """Main function to run the calculator."""
@@ -30,7 +55,6 @@ def main():
     print("Type 'exit' to quit.")
 
     history_manager = HistoryManager()
-
     enable_history = os.getenv('ENABLE_HISTORY', 'true').lower() == 'true'
 
     while True:
@@ -47,22 +71,9 @@ def main():
                 operand_b = float(input("Enter second number: "))
                 logging.info("Operands received: %s, %s", operand_a, operand_b)
 
-                if command == 'add':
-                    result = AddCommand().execute(operand_a, operand_b)
-                    logging.info("Addition result: %s", result)
-                elif command == 'subtract':
-                    result = SubtractCommand().execute(operand_a, operand_b)
-                    logging.info("Subtraction result: %s", result)
-                elif command == 'multiply':
-                    result = MultiplyCommand().execute(operand_a, operand_b)
-                    logging.info("Multiplication result: %s", result)
-                elif command == 'divide':
-                    result = DivideCommand().execute(operand_a, operand_b)
-                    logging.info("Division result: %s", result)
+                result = execute_command(command, operand_a, operand_b)
 
-                print("Result:", result)
-
-                if enable_history:
+                if result is not None and enable_history:
                     history_manager.add_to_history(command, operand_a, operand_b, result)
 
             except ValueError as error:
