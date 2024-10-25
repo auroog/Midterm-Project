@@ -26,7 +26,7 @@ jobs:
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
       - name: Run Pylint
         run: |
-          pylint calculator/ tests/
+          pylint calculator tests
       - name: Run tests with pytest
         run: |
           pytest --cov=calculator --cov-report=term-missing --cov-report=html tests/
