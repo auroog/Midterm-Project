@@ -9,7 +9,6 @@ from midterm_calculator.calculator.commands import (
     AddCommand, SubtractCommand, MultiplyCommand, DivideCommand
 )
 
-# Tests for basic arithmetic operations
 def test_add():
     """Test the add function."""
     assert add(2, 3) == 5
@@ -31,7 +30,6 @@ def test_divide():
     with pytest.raises(ValueError):
         divide(6, 0)
 
-# Tests for command classes
 def test_add_command():
     """Test the addition operation."""
     command = AddCommand()

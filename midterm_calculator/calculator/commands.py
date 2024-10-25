@@ -30,6 +30,7 @@ class SubtractCommand(Command):
     """Command to subtract the second operand from the first."""
     def execute(self, operand_a: float, operand_b: float) -> float:
         logger.info("Subtracting %s from %s", operand_b, operand_a)
+
         return operand_a - operand_b
 
     def description(self) -> str:

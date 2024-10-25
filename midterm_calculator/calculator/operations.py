@@ -2,7 +2,6 @@
 Operations module for performing arithmetic operations in the calculator.
 """
 
-
 def add(operand_a, operand_b):
     """
     Test the add function.

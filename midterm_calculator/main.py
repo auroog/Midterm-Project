@@ -13,7 +13,7 @@ from midterm_calculator.calculator.history_manager import HistoryManager
 log_level = os.getenv('LOG_LEVEL', 'INFO').upper()
 numeric_level = getattr(logging, log_level, logging.INFO)
 
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+logging.basicConfig(level=numeric_level, format='%(asctime)s - %(levelname)s - %(message)s')
 
 file_handler = logging.FileHandler('calculator.log')
 file_handler.setLevel(numeric_level)
@@ -21,8 +21,18 @@ formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
 file_handler.setFormatter(formatter)
 logging.getLogger().addHandler(file_handler)
 
+# Dictionary to map command strings
+command_dict = {
+    'add': AddCommand,
+    'subtract': SubtractCommand,
+    'multiply': MultiplyCommand,
+    'divide': DivideCommand,
+}
+
 def execute_command(command, operand_a, operand_b):
     """Executes the given command with the provided operands."""
+    result = None
+
     if command == 'add':
         result = AddCommand().execute(operand_a, operand_b)
     elif command == 'subtract':
@@ -44,7 +54,6 @@ def execute_command(command, operand_a, operand_b):
 
     return result
 
-
 def main():
     """Main function to run the calculator."""
     logging.info("Calculator program started.")
@@ -65,12 +74,10 @@ def main():
             logging.info("Exiting the calculator.")
             break
 
-        if command in ['add', 'subtract', 'multiply', 'divide']:
+        if command in command_dict.keys():
             try:
                 operand_a = float(input("Enter first number: "))
                 operand_b = float(input("Enter second number: "))
-                logging.info("Operands received: %s, %s", operand_a, operand_b)
-
                 result = execute_command(command, operand_a, operand_b)
 
                 if result is not None and enable_history:

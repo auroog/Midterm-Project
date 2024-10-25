@@ -8,6 +8,34 @@ import logging
 from midterm_calculator.calculator.commands import (
     AddCommand, SubtractCommand, MultiplyCommand, DivideCommand
 )
+def test_add_command():
+    """Test the execution of the AddCommand with various inputs."""
+    command = AddCommand()
+    assert command.execute(3, 5) == 8
+    assert command.execute(-1, 1) == 0
+    assert command.execute(-1, -1) == -2
+
+def test_subtract_command():
+    """Test the execution of the SubtractCommand with various inputs."""
+    command = SubtractCommand()
+    assert command.execute(10, 5) == 5
+    assert command.execute(0, 1) == -1
+    assert command.execute(-1, -1) == 0
+
+def test_multiply_command():
+    """Test the execution of the MultiplyCommand with various inputs."""
+    command = MultiplyCommand()
+    assert command.execute(3, 5) == 15
+    assert command.execute(-1, 5) == -5
+    assert command.execute(0, 100) == 0
+
+def test_divide_command():
+    """Test the execution of the DivideCommand with various inputs."""
+    command = DivideCommand()
+    assert command.execute(10, 2) == 5
+    assert command.execute(-10, -2) == 5
+    assert command.execute(0, 1) == 0
+
 
 def test_add_command_description():
     """Test that the description method of AddCommand returns the correct description."""

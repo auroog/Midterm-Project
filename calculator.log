@@ -6,3 +6,126 @@
 2024-10-23 22:15:42,451 - INFO - Added to history: add(52.0, 25.0) = 77.0
 2024-10-23 22:17:46,268 - INFO - User entered command: exit
 2024-10-23 22:17:46,281 - INFO - Exiting the calculator.
+2024-10-24 20:06:22,045 - INFO - Calculator program started.
+2024-10-24 20:06:32,182 - INFO - User entered command: ad
+2024-10-24 20:06:32,185 - WARNING - Unknown command: ad
+2024-10-24 20:06:33,250 - INFO - User entered command: add
+2024-10-24 20:06:38,291 - INFO - Operands received: 85.0, 26.0
+2024-10-24 20:06:38,292 - INFO - Adding 85.0 and 26.0
+2024-10-24 20:06:38,293 - INFO - Add result: 111.0
+2024-10-24 20:06:38,296 - INFO - Added to history: add(85.0, 26.0) = 111.0
+2024-10-24 20:09:14,910 - INFO - User entered command: load plugin square_root_plugin
+2024-10-24 20:09:14,914 - ERROR - Plugin 'calculator.plugins.square_root_plugin' not found.
+2024-10-24 20:10:59,526 - INFO - User entered command: exit
+2024-10-24 20:10:59,528 - INFO - Exiting the calculator.
+2024-10-24 20:24:39,968 - INFO - Calculator program started.
+2024-10-24 20:24:53,124 - INFO - User entered command: load plugin square_root_plugin.py
+2024-10-24 20:24:53,127 - ERROR - Plugin 'calculator.plugins.square_root_plugin.py' not found.
+2024-10-24 20:25:15,269 - INFO - User entered command: load square_root_pluging
+2024-10-24 20:25:15,271 - WARNING - Unknown command: load square_root_pluging
+2024-10-24 20:25:22,376 - INFO - User entered command: load square_root_plugin
+2024-10-24 20:25:22,413 - WARNING - Unknown command: load square_root_plugin
+2024-10-24 20:25:32,292 - INFO - User entered command: exit
+2024-10-24 20:25:32,294 - INFO - Exiting the calculator.
+2024-10-24 20:29:07,015 - INFO - Calculator program started.
+2024-10-24 20:29:24,448 - INFO - User entered command: add
+2024-10-24 20:29:29,498 - INFO - Operands received: 105.0, 895.0
+2024-10-24 20:30:50,080 - INFO - Calculator program started.
+2024-10-24 20:30:52,103 - INFO - User entered command: add
+2024-10-24 20:30:56,061 - INFO - Operands received: 69.0, 9.0
+2024-10-24 20:30:56,063 - INFO - Adding 69.0 and 9.0
+2024-10-24 20:30:56,065 - INFO - Add result: 78.0
+2024-10-24 20:30:56,068 - INFO - Added to history: add(69.0, 9.0) = 78.0
+2024-10-24 20:31:23,433 - INFO - User entered command: load plugin square_root_plugin
+2024-10-24 20:31:23,436 - ERROR - Plugin 'calculator.plugins.square_root_plugin' not found.
+2024-10-24 20:33:24,722 - INFO - User entered command: exit
+2024-10-24 20:33:24,744 - INFO - Exiting the calculator.
+2024-10-24 20:55:36,345 - INFO - Calculator program started.
+2024-10-24 20:55:40,126 - INFO - User entered command: add
+2024-10-24 20:55:44,489 - INFO - Operands received: 1.0, 5.0
+2024-10-24 20:55:44,491 - INFO - Adding 1.0 and 5.0
+2024-10-24 20:55:44,493 - INFO - Add result:6.0
+2024-10-24 20:55:44,497 - INFO - Added to history: add(1.0, 5.0) = 6.0
+2024-10-24 20:56:14,114 - INFO - User entered command: load plugin square_root_plugin
+2024-10-24 20:56:14,117 - ERROR - Plugin 'calculator.plugins.square_root_plugin' not found.
+2024-10-24 20:58:17,744 - INFO - User entered command: exit
+2024-10-24 20:58:17,746 - INFO - Exiting the calculator.
+2024-10-24 21:04:09,361 - INFO - Calculator program started.
+2024-10-24 21:04:12,493 - INFO - User entered command: add
+2024-10-24 21:04:18,521 - INFO - Operands received: 7.0, 4.0
+2024-10-24 21:04:18,523 - INFO - Adding 7.0 and 4.0
+2024-10-24 21:04:18,524 - INFO - Add result:11.0
+2024-10-24 21:04:18,527 - INFO - Added to history: add(7.0, 4.0) = 11.0
+2024-10-24 21:05:03,002 - INFO - User entered command: load plugin square_root_plugin
+2024-10-24 21:05:03,004 - ERROR - Plugin 'calculator.plugins.square_root_plugin' not found.
+2024-10-24 21:05:11,636 - INFO - User entered command:  load plugin square_root_plugin
+2024-10-24 21:05:11,638 - WARNING - Unknown command:  load plugin square_root_plugin
+2024-10-24 21:05:25,476 - INFO - User entered command:  plugin square_root_plugin
+2024-10-24 21:05:25,477 - WARNING - Unknown command:  plugin square_root_plugin
+2024-10-24 21:05:56,659 - INFO - User entered command: load plugin calculator_squ
+2024-10-24 21:05:56,662 - ERROR - Plugin 'calculator.plugins.calculator_squ' not found.
+2024-10-24 21:06:44,878 - INFO - User entered command:  'load plugin square_root_plugin'
+2024-10-24 21:06:44,880 - WARNING - Unknown command:  'load plugin square_root_plugin'
+2024-10-24 21:07:01,048 - INFO - User entered command:  square_root
+2024-10-24 21:07:01,050 - WARNING - Unknown command:  square_root
+2024-10-24 21:07:14,905 - INFO - User entered command: load plugin square_root_plugin
+2024-10-24 21:07:14,908 - ERROR - Plugin 'calculator.plugins.square_root_plugin' not found.
+2024-10-24 21:10:05,192 - INFO - User entered command: exit
+2024-10-24 21:10:05,194 - INFO - Exiting the calculator.
+2024-10-24 21:36:24,468 - INFO - Calculator program started.
+2024-10-24 21:36:26,056 - INFO - User entered command: add
+2024-10-24 21:36:28,185 - INFO - Operands received: 2.0, 3.0
+2024-10-24 21:36:28,186 - INFO - Adding 2.0 and 3.0
+2024-10-24 21:36:28,188 - INFO - Add result:5.0
+2024-10-24 21:36:28,190 - INFO - Added to history: add(2.0, 3.0) = 5.0
+2024-10-24 21:36:36,350 - INFO - User entered command: load plugin square_root_plugin
+2024-10-24 21:36:36,353 - ERROR - Plugin 'calculator.plugins.square_root_plugin' not found.
+2024-10-24 21:36:56,736 - INFO - User entered command: load plugin square_root_plugin
+2024-10-24 21:36:56,738 - ERROR - Plugin 'calculator.plugins.square_root_plugin' not found.
+2024-10-24 21:37:50,102 - INFO - User entered command: exit
+2024-10-24 21:37:50,103 - INFO - Exiting the calculator.
+2024-10-24 22:05:23,432 - INFO - Calculator program started.
+2024-10-24 22:05:41,886 - INFO - User entered command: add
+2024-10-24 22:05:44,234 - INFO - Operands received: 5.0, 3.0
+2024-10-24 22:05:44,236 - INFO - Adding 5.0 and 3.0
+2024-10-24 22:05:44,236 - INFO - Add result:8.0
+2024-10-24 22:05:44,239 - INFO - Added to history: add(5.0, 3.0) = 8.0
+2024-10-24 22:05:49,371 - INFO - User entered command: load plugin square_root_plugin
+2024-10-24 22:05:49,373 - ERROR - Plugin 'calculator.plugins.square_root_plugin' not found.
+2024-10-24 22:06:03,095 - INFO - User entered command: square_root
+2024-10-24 22:06:03,097 - WARNING - Unknown command: square_root
+2024-10-24 22:06:09,832 - INFO - User entered command: exit
+2024-10-24 22:06:09,834 - INFO - Exiting the calculator.
+2024-10-24 22:19:55,486 - INFO - Calculator program started.
+2024-10-24 22:19:57,097 - INFO - User entered command: add
+2024-10-24 22:19:59,389 - INFO - Operands received: 8.0, 5.0
+2024-10-24 22:19:59,390 - INFO - Adding 8.0 and 5.0
+2024-10-24 22:19:59,391 - INFO - Add result:13.0
+2024-10-24 22:19:59,394 - INFO - Added to history: add(8.0, 5.0) = 13.0
+2024-10-24 22:20:15,824 - INFO - User entered command: load plugin square_root_plugin
+2024-10-24 22:20:15,826 - ERROR - Plugin 'calculator.plugins.square_root_plugin' not found.
+2024-10-24 22:20:20,153 - INFO - User entered command: 
+2024-10-24 22:20:20,155 - WARNING - Unknown command: 
+2024-10-24 22:21:54,644 - INFO - User entered command: exit
+2024-10-24 22:21:54,646 - INFO - Exiting the calculator.
+2024-10-24 22:31:30,996 - INFO - Calculator program started.
+2024-10-24 22:31:33,848 - INFO - User entered command: add
+2024-10-24 22:31:43,670 - INFO - Adding 5.0 and 6.0
+2024-10-24 22:31:43,671 - INFO - Add result:11.0
+2024-10-24 22:31:43,673 - INFO - Add result: 11.0
+2024-10-24 22:31:43,675 - INFO - Added to history: add(5.0, 6.0) = 11.0
+2024-10-24 22:32:45,080 - INFO - User entered command: load plugin square_root_plugin
+2024-10-24 22:32:45,083 - ERROR - Plugin 'calculator.plugins.square_root_plugin' not found.
+2024-10-24 22:34:09,398 - INFO - User entered command: exir
+2024-10-24 22:34:09,400 - WARNING - Unknown command: exir
+2024-10-24 22:34:11,076 - INFO - User entered command: exit
+2024-10-24 22:34:11,077 - INFO - Exiting the calculator.
+2024-10-25 00:47:43,046 - INFO - Calculator program started.
+2024-10-25 00:47:44,905 - INFO - User entered command: add
+2024-10-25 00:47:47,678 - INFO - Adding 8.0 and 6.0
+2024-10-25 00:47:47,679 - INFO - Add result: 14.0
+2024-10-25 00:47:47,682 - INFO - Added to history: add(8.0, 6.0) = 14.0
+2024-10-25 00:47:52,368 - INFO - User entered command: history
+2024-10-25 00:47:52,371 - INFO - Displaying calculation history.
+2024-10-25 00:47:59,420 - INFO - User entered command: exit
+2024-10-25 00:47:59,421 - INFO - Exiting the calculator.
